@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: 'Trends';
-    src: url('/fonts/Trends.ttf') format('truetype');
+    src: url('../fonts/Trends.ttf') format('truetype');
     font-display: swap;
     font-weight: normal;
     font-style: normal;
@@ -40,7 +40,7 @@ body {
 }
 
 header {
-    background-image: url('../img/Sfondo.png');
+    background-image: url('../img/sfondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

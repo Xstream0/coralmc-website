@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Trends';
-    src: url('/fonts/trends.ttf') format('truetype'),
-         url('/fonts/Trends.ttf') format('truetype');
+    src: url('../fonts/Trends.ttf') format('truetype');
     font-display: swap;
     font-weight: normal;
     font-style: normal;
@@ -16,7 +15,7 @@
 
 body {
     min-height: 100vh;
-    background: url('/img/Sfondo.png') no-repeat center center fixed;
+    background: url('../img/sfondo.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
     display: flex;
