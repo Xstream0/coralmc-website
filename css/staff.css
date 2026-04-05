@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #1a1f2e;
+    --secondary-color: #2a2f3e;
+    --accent-color: #00b4ff;
+    --text-color: #ffffff;
+
+    --color-owner:    #ff4444;
+    --color-manager:  #ff69b4;
+    --color-sradmin:  #2ecc71;
+    --color-admin:    #27ae60;
+    --color-m:        #95a5a6;
+    --color-srdev:    #5dade2;
+    --color-dev:      #3498db;
+    --color-srmod:    #2980b9;
+    --color-jrdev:    #1abc9c;
+    --color-mod:      #1a8cd8;
+    --color-helper:   #2ecc71;
+    --color-trainee:  #1db954;
+}
+
+@font-face {
+    font-family: 'Trends';
+    src: url('/fonts/Trends.ttf') format('truetype');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trends', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+header {
+    background-image: url('../img/Sfondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+    backdrop-filter: blur(5px);
+}
+
+.nav-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.8rem;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-item i { font-size: 1.2rem; }
+
+.nav-item:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.store-button {
+    background-color: #1a8cd8;
+    box-shadow: 0 0 20px rgba(26,140,216,0.5);
+    padding: 1rem 2.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.store-button::after {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.store-button:hover::after {
+    opacity: 1;
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+.logo {
+    text-align: center;
+    padding: 1rem 0 1.5rem;
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+    filter: drop-shadow(0 0 25px rgba(255,255,255,0.4));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    margin: 0 auto;
+}
+
+.logo img:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: drop-shadow(0 0 35px rgba(255,255,255,0.5));
+}
+
+.page-title {
+    margin-top: 0.6rem;
+    font-size: 2rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    text-shadow:
+        0 0 12px rgba(255, 4, 0, 0.7),
+        0 0 30px rgb(255, 0, 0);
+}
+
+.staff-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.staff-section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-left: 4px solid currentColor;
+}
+
+.role-owner   { color: var(--color-owner);   }
+.role-manager { color: var(--color-manager); }
+.role-sradmin { color: var(--color-sradmin); }
+.role-admin   { color: var(--color-admin);   }
+.role-m       { color: var(--color-m);       }
+.role-srdev   { color: var(--color-srdev);   }
+.role-dev     { color: var(--color-dev);     }
+.role-srmod   { color: var(--color-srmod);   }
+.role-jrdev   { color: var(--color-jrdev);   }
+.role-mod     { color: var(--color-mod);     }
+.role-helper  { color: var(--color-helper);  }
+.role-trainee { color: var(--color-trainee); }
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.staff-grid:empty::after {
+    content: 'Nessun membro';
+    color: rgba(255,255,255,0.3);
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.staff-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.staff-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    image-rendering: pixelated;
+}
+
+.staff-info { flex-grow: 1; }
+
+.staff-info .name {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.staff-info .role {
+    font-size: 0.78rem;
+    opacity: 0.65;
+}
+
+@media (max-width: 768px) {
+    .nav-container { gap: 1rem; }
+
+    .page-title { font-size: 1.4rem; letter-spacing: 0.25em; }
+
+    .staff-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

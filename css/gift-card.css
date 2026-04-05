@@ -1,0 +1,104 @@
+/* Gift Card Page Styles */
+
+.gift-card-header {
+    justify-content: center;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+.gift-card-title {
+    font-size: 2.5rem;
+    color: #4fc3ff;
+}
+
+.gift-card-subtitle {
+    font-size: 1.1rem;
+    color: #d7eaff;
+}
+
+.gift-card-section-title {
+    color: #4fc3ff;
+    margin-bottom: 1.5rem;
+}
+
+.gift-card-step {
+    background: rgba(20, 20, 20, 0.5);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 2rem;
+}
+
+.gift-card-step h3 {
+    color: #4fc3ff;
+    margin-bottom: 1rem;
+}
+
+.gift-card-step p {
+    color: #d7eaff;
+    line-height: 1.5;
+}
+
+.gift-card-warning {
+    margin-top: 0.5rem;
+    color: #f0a000;
+}
+
+.gift-card-faq-item {
+    background: rgba(20, 20, 20, 0.5);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.gift-card-faq-item h4 {
+    color: #4fc3ff;
+    margin-bottom: 0.5rem;
+}
+
+.gift-card-faq-item p {
+    color: #d7eaff;
+    line-height: 1.5;
+}
+
+.gift-card-cta {
+    text-align: center;
+    background: rgba(10, 10, 10, 0.55);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.gift-card-cta h2 {
+    color: #4fc3ff;
+    margin-bottom: 1rem;
+}
+
+.gift-card-cta p {
+    color: #d7eaff;
+    margin-bottom: 1.5rem;
+}
+
+.gift-card-cta-button {
+    background: #4fc3ff;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.gift-card-cta-button:hover {
+    background: #3aafeb;
+}
+
+.gift-card-steps-container {
+    grid-template-columns: 1fr;
+}
+
+.gift-card-faq-container {
+    grid-template-columns: 1fr;
+}
